@@ -1,0 +1,4 @@
+// 1.20.1	2024-07-13T10:14:44.6628291	Tags for minecraft:block mod id cobalt
+3bee95e378cb1a4341e37cc78545125ee73c4864 data/cobalt/tags/blocks/metal_detector_valuables.json
+0012c5fe3ac870bb0b3f1e7cce3231dbe29d485d data/minecraft/tags/blocks/mineable/pickaxe.json
+291dd835f7aa518c6c40c31ce2a3f069d57bbc55 data/minecraft/tags/blocks/needs_iron_tool.json

@@ -1,0 +1,13 @@
+// 1.20.1	2024-07-13T10:14:44.6628291	Block States: cobalt
+d334f671dbb5e2bd1385ca840bcbf8e3bd076c7c assets/cobalt/blockstates/cobalt_block.json
+e4aafbc0ceb21c4cd687e3962e353cefcc7e08aa assets/cobalt/blockstates/cobalt_ore.json
+1ce569270a3b1b9174dc3fd4a936b14507e3ed2e assets/cobalt/blockstates/deepslate_cobalt_ore.json
+ac2ffe20de80d0c479ddf36be98cbb463e203cb2 assets/cobalt/blockstates/hempcrete_bricks.json
+07f46b9a19dca8d2c8ddc6f98bdab11ce91b392a assets/cobalt/models/block/cobalt_block.json
+a158b4b9df5ca9e08caa7d2a6e5b2085c99fd3c1 assets/cobalt/models/block/cobalt_ore.json
+75eb748378d943cdffe5660269bb7cdb5ed34885 assets/cobalt/models/block/deepslate_cobalt_ore.json
+3d2a14601ff8e255c197605f5a2e11f8aa1cf2bd assets/cobalt/models/block/hempcrete_bricks.json
+d1f16ddf4c64a349d785555270c4387fbb4fbca3 assets/cobalt/models/item/cobalt_block.json
+0608f9dada76800331638f2eacb6238331a2f198 assets/cobalt/models/item/cobalt_ore.json
+4f5bc1db5d099d33a65a5c7d05d1016d9eb36c2c assets/cobalt/models/item/deepslate_cobalt_ore.json
+2bc85e95c09106707cc87ee2af02d5d35f52ffcf assets/cobalt/models/item/hempcrete_bricks.json
