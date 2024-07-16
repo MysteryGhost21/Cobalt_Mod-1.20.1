@@ -5,10 +5,16 @@
   "item.cobalt.cobalt_ingot": "Cobalt Ingot",
   "item.cobalt.metal_detector": "Metal Detector",
   "item.cobalt.hempcrete_brick": "Hempcrete Brick",
+  "item.cobalt.hemp": "Hemp",
+  "item.cobalt.hemp_seeds": "Hemp Seeds",
+  "item.cobalt.peanut": "Peanut",
+  "item.cobalt.peanut_seeds": "Peanut Seeds",
 
   "block.cobalt.cobalt_ore": "Cobalt Ore",
   "block.cobalt.deepslate_cobalt_ore": "Deepslate Cobalt Ore",
   "block.cobalt.cobalt_block": "Block of Cobalt",
+
+  "block.cobalt.gem_polishing_station": "Gem Polishing Station",
 
   "block.cobalt.hempcrete_bricks": "Hempcrete Bricks"
 }

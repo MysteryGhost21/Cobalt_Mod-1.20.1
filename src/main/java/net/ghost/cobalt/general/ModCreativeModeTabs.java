@@ -20,15 +20,21 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.COBALT_INGOT.get()))
                     .title(Component.translatable("creativetab.cobalt_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                        //Cobalt
+                        //Items
                         pOutput.accept(ModItems.RAW_COBALT.get());
                         pOutput.accept(ModItems.COBALT_INGOT.get());
                         pOutput.accept(ModItems.HEMPCRETE_BRICK.get());
+                        pOutput.accept(ModItems.HEMP.get());
+                        pOutput.accept(ModItems.PEANUT.get());
+                        pOutput.accept(ModItems.PEANUT_SEEDS.get());
+                        pOutput.accept(ModItems.HEMP_SEEDS.get());
+                        pOutput.accept(ModItems.METAL_DETECTOR.get());
+                        //Blocks
                         pOutput.accept(ModBlocks.COBALT_ORE.get());
                         pOutput.accept(ModBlocks.DEEPSLATE_COBALT_ORE.get());
                         pOutput.accept(ModBlocks.COBALT_BLOCK.get());
-                        pOutput.accept(ModItems.METAL_DETECTOR.get());
                         pOutput.accept(ModBlocks.HEMPCRETE_BRICKS.get());
+                        pOutput.accept(ModBlocks.GEM_POLISHING_STATION.get());
                     })
                     .build());
 

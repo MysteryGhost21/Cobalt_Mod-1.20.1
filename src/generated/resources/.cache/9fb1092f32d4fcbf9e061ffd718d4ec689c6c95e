@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-13T10:14:44.6638269	Recipes
+// 1.20.1	2024-07-15T00:31:40.7943521	Recipes
 e63a20915d0c865c234c2307d9c875e1c4895d0a data/cobalt/advancements/recipes/misc/cobalt_block.json
 a501a1a5fd1d4bd33bc086bb644c448c7ae99919 data/cobalt/advancements/recipes/misc/cobalt_ingot.json
 ec4bf8d80dd7cdf2703e5f9421a8aef73bc91c4b data/cobalt/advancements/recipes/misc/cobalt_ingot_from_blasting_cobalt_ore.json
@@ -7,7 +7,10 @@ ec4bf8d80dd7cdf2703e5f9421a8aef73bc91c4b data/cobalt/advancements/recipes/misc/c
 931aba7cfff2fb1534bdca51b6ec5baf0c630202 data/cobalt/advancements/recipes/misc/cobalt_ingot_from_smelting_cobalt_ore.json
 2b59bae9ab65aa39b6c39de4b9f39c9156b6d994 data/cobalt/advancements/recipes/misc/cobalt_ingot_from_smelting_deepslate_cobalt_ore.json
 6478f3c3aa3c0c016c5482c9fd3f6e078be30797 data/cobalt/advancements/recipes/misc/cobalt_ingot_from_smelting_raw_cobalt.json
+e2ba4b0baaa24ffb80f0e34ff396c5ccc67db771 data/cobalt/advancements/recipes/misc/hempcrete_brick.json
 5c80f57776541160a03acc57e168c1ed4227d40e data/cobalt/advancements/recipes/misc/hempcrete_bricks.json
+e01dedf14b63c037e877c631f1ca6954df1546d3 data/cobalt/advancements/recipes/misc/hemp_seeds.json
+b93489ac2ca62a4126430e81f83212cc5278f311 data/cobalt/advancements/recipes/misc/peanut_seeds.json
 14fa5ec6b231e3f2d4d1454135df47058ebc1cae data/cobalt/recipes/cobalt_block.json
 d62c02eb525868b215366b13a59c4c02aca8217d data/cobalt/recipes/cobalt_ingot.json
 bfac0f2ecb7824559cda51ca74b1ef4c9e52b735 data/cobalt/recipes/cobalt_ingot_from_blasting_cobalt_ore.json
@@ -16,4 +19,7 @@ e948ed10d9bc1e18e9c81b9d0af4de9393110981 data/cobalt/recipes/cobalt_ingot_from_b
 23718119ebb58a1b56e3fdd03812cf08aa8f1b5a data/cobalt/recipes/cobalt_ingot_from_smelting_cobalt_ore.json
 d88554a954e32b7db4a56c83cdd9833fd2d31bbe data/cobalt/recipes/cobalt_ingot_from_smelting_deepslate_cobalt_ore.json
 0ad31b205c721b9b306cc60806ebb35bb095012b data/cobalt/recipes/cobalt_ingot_from_smelting_raw_cobalt.json
+8a57644a61518bfe69ed0bb879f0af60076daf64 data/cobalt/recipes/hempcrete_brick.json
 df0ad67e1486bfd20687f2865eb9c367c4d066ed data/cobalt/recipes/hempcrete_bricks.json
+48cc3eda50fe305171a27b7db7def114e4615b19 data/cobalt/recipes/hemp_seeds.json
+cf13390255983e3460838c9f09e8635c30438c77 data/cobalt/recipes/peanut_seeds.json

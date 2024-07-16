@@ -21,6 +21,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RAW_COBALT);
         simpleItem(ModItems.METAL_DETECTOR);
         simpleItem(ModItems.HEMPCRETE_BRICK);
+        simpleItem(ModItems.HEMP);
+        simpleItem(ModItems.HEMP_SEEDS);
+        simpleItem(ModItems.PEANUT);
+        simpleItem(ModItems.PEANUT_SEEDS);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

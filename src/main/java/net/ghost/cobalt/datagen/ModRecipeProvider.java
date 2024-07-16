@@ -50,6 +50,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.COBALT_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.COBALT_BLOCK.get()), has(ModBlocks.COBALT_BLOCK.get()))
                 .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PEANUT_SEEDS.get(), 1)
+                .requires(ModItems.PEANUT.get())
+                .unlockedBy(getHasName(ModItems.PEANUT.get()), has(ModItems.PEANUT.get()))
+                .save(pWriter);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HEMP_SEEDS.get(), 1)
+                .requires(ModItems.HEMP.get())
+                .unlockedBy(getHasName(ModItems.HEMP.get()), has(ModItems.HEMP.get()))
+                .save(pWriter);
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HEMPCRETE_BRICK.get(), 4)
+                .requires(ModItems.HEMP.get())
+                .requires(ModItems.HEMP.get())
+                .unlockedBy(getHasName(ModItems.HEMP.get()), has(ModItems.HEMP.get()))
+                .save(pWriter);
     }
 
 

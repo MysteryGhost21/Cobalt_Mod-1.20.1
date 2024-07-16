@@ -1,6 +1,9 @@
 package net.ghost.cobalt.block;
 
 import net.ghost.cobalt.Cobalt;
+import net.ghost.cobalt.block.custom.GemPolishingStationBlock;
+import net.ghost.cobalt.block.custom.HempCropBlock;
+import net.ghost.cobalt.block.custom.PeanutCropBlock;
 import net.ghost.cobalt.item.ModItems;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -34,6 +37,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> HEMPCRETE_BRICKS = registerBlock("hempcrete_bricks",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
                     .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> PEANUT_CROP = BLOCKS.register("peanut_crop",
+            () -> new PeanutCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> HEMP_CROP = BLOCKS.register("hemp_crop",
+            () -> new HempCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
+            () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
 
 

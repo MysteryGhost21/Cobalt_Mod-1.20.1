@@ -1,5 +1,8 @@
-// 1.20.1	2024-07-13T10:14:44.6628291	Loot Tables
+// 1.20.1	2024-07-15T22:03:40.8842304	Loot Tables
 507a7ac0d4a1cfb4206953ebf6d1a7edc2e05522 data/cobalt/loot_tables/blocks/cobalt_block.json
 582d89baf3b0fe2be69980f4850b09b40e8b42a4 data/cobalt/loot_tables/blocks/cobalt_ore.json
 7385250109ea4317f1aaeef5460d3d54550faeca data/cobalt/loot_tables/blocks/deepslate_cobalt_ore.json
+61a01d00ae32f632fe91f34fdf4961a50f53d309 data/cobalt/loot_tables/blocks/gem_polishing_station.json
 b1625cc5dd939eec2203302c0af2be9cccfb448c data/cobalt/loot_tables/blocks/hempcrete_bricks.json
+d67b4e3872ae5b99937cbebbace69aa9a47c2402 data/cobalt/loot_tables/blocks/hemp_crop.json
+d63b82fa0bead53ddba459069385959e4aff6f0a data/cobalt/loot_tables/blocks/peanut_crop.json
