@@ -1,7 +1,8 @@
 package net.ghost.cobalt.block.custom;
 
-import net.ghost.cobalt.block.entity.GemPolishingStationBlockEntity;
+
 import net.ghost.cobalt.block.entity.ModBlockEntities;
+import net.ghost.cobalt.block.entity.OreExtractorMKOneBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -19,19 +20,17 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
 import static net.minecraft.world.level.block.HorizontalDirectionalBlock.FACING;
 
-public class GemPolishingStationBlock extends BaseEntityBlock {
-    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 8, 16);
+public class OreExtractorMKOneBlock extends BaseEntityBlock {
+    public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 32, 16);
 
-    public GemPolishingStationBlock(Properties pProperties) {
+    public OreExtractorMKOneBlock(Properties pProperties) {
         super(pProperties);
     }
 
@@ -49,8 +48,8 @@ public class GemPolishingStationBlock extends BaseEntityBlock {
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
         if (pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-            if (blockEntity instanceof GemPolishingStationBlockEntity) {
-                ((GemPolishingStationBlockEntity) blockEntity).drops();
+            if (blockEntity instanceof OreExtractorMKOneBlockEntity) {
+                ((OreExtractorMKOneBlockEntity) blockEntity).drops();
             }
         }
         super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
@@ -60,8 +59,8 @@ public class GemPolishingStationBlock extends BaseEntityBlock {
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if(entity instanceof GemPolishingStationBlockEntity) {
-                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (GemPolishingStationBlockEntity)entity, pPos);
+            if(entity instanceof OreExtractorMKOneBlockEntity) {
+                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (OreExtractorMKOneBlockEntity)entity, pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
@@ -77,7 +76,7 @@ public class GemPolishingStationBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return new GemPolishingStationBlockEntity(pPos, pState);
+        return new OreExtractorMKOneBlockEntity(pPos, pState);
     }
 
     @Nullable
@@ -86,7 +85,7 @@ public class GemPolishingStationBlock extends BaseEntityBlock {
         if(pLevel.isClientSide()) {
             return null;
         }
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.GEM_POLISHING_BE.get(),
+        return createTickerHelper(pBlockEntityType, ModBlockEntities.ORE_EXTRACTION_MKONE_BE.get(),
                 (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
     }
 

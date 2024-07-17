@@ -30,6 +30,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.COBALT_BLOCK.get());
         this.dropSelf(ModBlocks.HEMPCRETE_BRICKS.get());
         this.dropSelf(ModBlocks.GEM_POLISHING_STATION.get());
+        this.dropSelf(ModBlocks.ORE_EXTRACTOR_MKONE.get());
 
         this.add(ModBlocks.COBALT_ORE.get(),
                 block -> createIronLikeOreDrops(ModBlocks.COBALT_ORE.get(), ModItems.RAW_COBALT.get()));

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "cobalt:block/ore_extractor_mkone",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "cobalt:block/ore_extractor_mkone",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "cobalt:block/ore_extractor_mkone"
+    },
+    "facing=west": {
+      "model": "cobalt:block/ore_extractor_mkone",
+      "y": 90
+    }
+  }
+}

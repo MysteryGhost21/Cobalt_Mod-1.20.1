@@ -35,6 +35,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.COBALT_BLOCK.get());
                         pOutput.accept(ModBlocks.HEMPCRETE_BRICKS.get());
                         pOutput.accept(ModBlocks.GEM_POLISHING_STATION.get());
+                        pOutput.accept(ModBlocks.ORE_EXTRACTOR_MKONE.get());
                     })
                     .build());
 

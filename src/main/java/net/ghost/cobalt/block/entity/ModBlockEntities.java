@@ -18,6 +18,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(GemPolishingStationBlockEntity::new,
                             ModBlocks.GEM_POLISHING_STATION.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<OreExtractorMKOneBlockEntity>> ORE_EXTRACTION_MKONE_BE =
+            BLOCK_ENTITIES.register("ore_extraction_mkone_be", () ->
+                    BlockEntityType.Builder.of(OreExtractorMKOneBlockEntity::new,
+                            ModBlocks.ORE_EXTRACTOR_MKONE.get()).build(null));
+
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

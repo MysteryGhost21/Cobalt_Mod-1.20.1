@@ -1,9 +1,9 @@
 package net.ghost.cobalt.block.entity;
 
 import net.ghost.cobalt.block.ModBlocks;
-import net.ghost.cobalt.block.custom.GemPolishingStationBlock;
 import net.ghost.cobalt.item.ModItems;
 import net.ghost.cobalt.screen.GemPolishingStationMenu;
+import net.ghost.cobalt.screen.OreExtractionMKOneMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -21,7 +21,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -31,7 +30,7 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class GemPolishingStationBlockEntity extends BlockEntity implements MenuProvider {
+public class OreExtractorMKOneBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(2);
 
     private static final int INPUT_SLOT = 0;
@@ -43,14 +42,14 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     private int progress = 0;
     private int maxProgress = 78;
 
-    public GemPolishingStationBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.GEM_POLISHING_BE.get(), pPos, pBlockState);
+    public OreExtractorMKOneBlockEntity(BlockPos pPos, BlockState pBlockState) {
+        super(ModBlockEntities.ORE_EXTRACTION_MKONE_BE.get(), pPos, pBlockState);
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
                 return switch (pIndex) {
-                    case 0 -> GemPolishingStationBlockEntity.this.progress;
-                    case 1 -> GemPolishingStationBlockEntity.this.maxProgress;
+                    case 0 -> OreExtractorMKOneBlockEntity.this.progress;
+                    case 1 -> OreExtractorMKOneBlockEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -58,8 +57,8 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
             @Override
             public void set(int pIndex, int pValue) {
                 switch (pIndex) {
-                    case 0 -> GemPolishingStationBlockEntity.this.progress = pValue;
-                    case 1 -> GemPolishingStationBlockEntity.this.maxProgress = pValue;
+                    case 0 -> OreExtractorMKOneBlockEntity.this.progress = pValue;
+                    case 1 -> OreExtractorMKOneBlockEntity.this.maxProgress = pValue;
                 }
             }
 
@@ -100,19 +99,19 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.cobalt.gem_polishing_station");
+        return Component.translatable("block.cobalt.ore_extractor_mkone");
     }
 
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
-        return new GemPolishingStationMenu(pContainerId, pPlayerInventory, this, this.data);
+        return new OreExtractionMKOneMenu(pContainerId, pPlayerInventory, this, this.data);
     }
 
     @Override
     protected void saveAdditional(CompoundTag pTag) {
         pTag.put("inventory", itemHandler.serializeNBT());
-        pTag.putInt("gem_polishing_station.progress", progress);
+        pTag.putInt("ore_extraction_mkone.progress", progress);
 
         super.saveAdditional(pTag);
     }
@@ -121,7 +120,7 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     public void load(CompoundTag pTag) {
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
-        progress = pTag.getInt("gem_polishing_station.progress");
+        progress = pTag.getInt("ore_extraction_mkone.progress");
     }
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
@@ -150,7 +149,7 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
         BlockPos spawnPos = this.getBlockPos(); // Adjust the offset as needed
 
         // Spawn the item entity at the specified position
-        ItemEntity itemEntity = new ItemEntity(this.level, spawnPos.getX() + 1.5, spawnPos.getY() + 2, spawnPos.getZ() + 0.5, result);
+        ItemEntity itemEntity = new ItemEntity(this.level, spawnPos.getX() + 1.5, spawnPos.getY() + 1, spawnPos.getZ() + 0.5, result);
         itemEntity.setDeltaMovement(0, 0, 0);
         this.level.addFreshEntity(itemEntity);
     }

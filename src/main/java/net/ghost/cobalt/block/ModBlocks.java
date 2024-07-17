@@ -3,6 +3,7 @@ package net.ghost.cobalt.block;
 import net.ghost.cobalt.Cobalt;
 import net.ghost.cobalt.block.custom.GemPolishingStationBlock;
 import net.ghost.cobalt.block.custom.HempCropBlock;
+import net.ghost.cobalt.block.custom.OreExtractorMKOneBlock;
 import net.ghost.cobalt.block.custom.PeanutCropBlock;
 import net.ghost.cobalt.item.ModItems;
 import net.minecraft.util.valueproviders.ConstantInt;
@@ -46,6 +47,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
             () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> ORE_EXTRACTOR_MKONE = registerBlock("ore_extractor_mkone",
+            () -> new OreExtractorMKOneBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().lightLevel(s -> 2)));
 
 
 

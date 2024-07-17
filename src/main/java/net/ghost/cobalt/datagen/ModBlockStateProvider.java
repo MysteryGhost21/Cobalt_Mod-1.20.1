@@ -28,9 +28,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.COBALT_ORE);
         blockWithItem(ModBlocks.HEMPCRETE_BRICKS);
 
-        simpleBlockWithItem(ModBlocks.GEM_POLISHING_STATION.get(),
-                new ModelFile.UncheckedModelFile(modLoc("block/gem_polishing_station")));
-
         makePeanutCrop((CropBlock) ModBlocks.PEANUT_CROP.get(), "peanut_stage", "peanut_stage");
     }
 
