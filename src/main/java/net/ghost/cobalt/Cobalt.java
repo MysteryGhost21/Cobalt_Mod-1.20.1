@@ -5,6 +5,7 @@ import net.ghost.cobalt.block.ModBlocks;
 import net.ghost.cobalt.block.entity.ModBlockEntities;
 import net.ghost.cobalt.general.ModCreativeModeTabs;
 import net.ghost.cobalt.item.ModItems;
+import net.ghost.cobalt.recipe.ModRecipes;
 import net.ghost.cobalt.screen.GemPolishingStationMenu;
 import net.ghost.cobalt.screen.GemPolishingStationScreen;
 import net.ghost.cobalt.screen.ModMenuTypes;
@@ -43,6 +44,8 @@ public class Cobalt
 
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

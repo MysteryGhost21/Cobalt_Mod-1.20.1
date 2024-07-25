@@ -18,6 +18,9 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COBALT_INGOT = ITEMS.register("cobalt_ingot",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> IRON_CHUNK = ITEMS.register("iron_chunk",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> HEMPCRETE_BRICK = ITEMS.register("hempcrete_brick",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> HEMP = ITEMS.register("hemp",

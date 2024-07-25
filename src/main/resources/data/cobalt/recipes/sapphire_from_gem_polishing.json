@@ -1,0 +1,12 @@
+{
+  "type": "cobalt:gem_polishing",
+  "ingredients": [
+    {
+      "item": "cobalt:raw_cobalt"
+    }
+  ],
+  "output": {
+    "count": 3,
+    "item": "cobalt:cobalt_ingot"
+  }
+}

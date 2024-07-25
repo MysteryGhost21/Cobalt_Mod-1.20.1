@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                         //Items
                         pOutput.accept(ModItems.RAW_COBALT.get());
                         pOutput.accept(ModItems.COBALT_INGOT.get());
+                        pOutput.accept(ModItems.IRON_CHUNK.get());
                         pOutput.accept(ModItems.HEMPCRETE_BRICK.get());
                         pOutput.accept(ModItems.HEMP.get());
                         pOutput.accept(ModItems.PEANUT.get());
@@ -32,6 +33,7 @@ public class ModCreativeModeTabs {
                         //Blocks
                         pOutput.accept(ModBlocks.COBALT_ORE.get());
                         pOutput.accept(ModBlocks.DEEPSLATE_COBALT_ORE.get());
+                        pOutput.accept(ModBlocks.CONCENTRATED_IRON_ORE.get());
                         pOutput.accept(ModBlocks.COBALT_BLOCK.get());
                         pOutput.accept(ModBlocks.HEMPCRETE_BRICKS.get());
                         pOutput.accept(ModBlocks.GEM_POLISHING_STATION.get());

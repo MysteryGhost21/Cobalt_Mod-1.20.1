@@ -3,6 +3,7 @@
 
   "item.cobalt.raw_cobalt": "Raw Cobalt",
   "item.cobalt.cobalt_ingot": "Cobalt Ingot",
+  "item.cobalt.iron_chunk": "Iron Chunk",
   "item.cobalt.metal_detector": "Metal Detector",
   "item.cobalt.hempcrete_brick": "Hempcrete Brick",
   "item.cobalt.hemp": "Hemp",
@@ -13,6 +14,7 @@
   "block.cobalt.cobalt_ore": "Cobalt Ore",
   "block.cobalt.deepslate_cobalt_ore": "Deepslate Cobalt Ore",
   "block.cobalt.cobalt_block": "Block of Cobalt",
+  "block.cobalt.concentrated_iron_ore": "Concentrated Iron Ore",
 
   "block.cobalt.gem_polishing_station": "Gem Polishing Station",
   "block.cobalt.ore_extractor_mkone": "Ore Extractor - Mk. I",

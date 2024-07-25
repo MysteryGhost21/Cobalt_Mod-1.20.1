@@ -26,6 +26,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.COBALT_BLOCK);
         blockWithItem(ModBlocks.DEEPSLATE_COBALT_ORE);
         blockWithItem(ModBlocks.COBALT_ORE);
+        blockWithItem(ModBlocks.CONCENTRATED_IRON_ORE);
         blockWithItem(ModBlocks.HEMPCRETE_BRICKS);
 
         makePeanutCrop((CropBlock) ModBlocks.PEANUT_CROP.get(), "peanut_stage", "peanut_stage");
@@ -33,15 +34,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     public void makePeanutCrop(CropBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> peanutStates(state, block, modelName, textureName);
-
         getVariantBuilder(block).forAllStates(function);
     }
-
     private ConfiguredModel[] peanutStates(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((PeanutCropBlock) block).getAgeProperty()),
                 new ResourceLocation(Cobalt.MOD_ID, "block/" + textureName + state.getValue(((PeanutCropBlock) block).getAgeProperty()))).renderType("cutout"));
-
         return models;
     }
 

@@ -35,6 +35,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> COBALT_BLOCK = registerBlock("cobalt_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
+    public static final RegistryObject<Block> CONCENTRATED_IRON_ORE = registerBlock("concentrated_iron_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).noLootTable()));
+
     public static final RegistryObject<Block> HEMPCRETE_BRICKS = registerBlock("hempcrete_bricks",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
                     .requiresCorrectToolForDrops()));

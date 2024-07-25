@@ -2,7 +2,6 @@ package net.ghost.cobalt.block.entity;
 
 import net.ghost.cobalt.block.ModBlocks;
 import net.ghost.cobalt.item.ModItems;
-import net.ghost.cobalt.screen.GemPolishingStationMenu;
 import net.ghost.cobalt.screen.OreExtractionMKOneMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -31,7 +30,7 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class OreExtractorMKOneBlockEntity extends BlockEntity implements MenuProvider {
+public class OreExtractorMKOneBlockEntityBackup extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(2);
 
     private static final int INPUT_SLOT = 0;
@@ -43,14 +42,14 @@ public class OreExtractorMKOneBlockEntity extends BlockEntity implements MenuPro
     private int progress = 0;
     private int maxProgress = 78;
 
-    public OreExtractorMKOneBlockEntity(BlockPos pPos, BlockState pBlockState) {
+    public OreExtractorMKOneBlockEntityBackup(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.ORE_EXTRACTION_MKONE_BE.get(), pPos, pBlockState);
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
                 return switch (pIndex) {
-                    case 0 -> OreExtractorMKOneBlockEntity.this.progress;
-                    case 1 -> OreExtractorMKOneBlockEntity.this.maxProgress;
+                    case 0 -> OreExtractorMKOneBlockEntityBackup.this.progress;
+                    case 1 -> OreExtractorMKOneBlockEntityBackup.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -58,8 +57,8 @@ public class OreExtractorMKOneBlockEntity extends BlockEntity implements MenuPro
             @Override
             public void set(int pIndex, int pValue) {
                 switch (pIndex) {
-                    case 0 -> OreExtractorMKOneBlockEntity.this.progress = pValue;
-                    case 1 -> OreExtractorMKOneBlockEntity.this.maxProgress = pValue;
+                    case 0 -> OreExtractorMKOneBlockEntityBackup.this.progress = pValue;
+                    case 1 -> OreExtractorMKOneBlockEntityBackup.this.maxProgress = pValue;
                 }
             }
 
@@ -178,7 +177,7 @@ public class OreExtractorMKOneBlockEntity extends BlockEntity implements MenuPro
         this.level.addFreshEntity(itemEntity);
     }
 
-    public boolean hasRecipe() {
+    private boolean hasRecipe() {
         BlockPos machinePos = this.getBlockPos();
         BlockState blockStateBeneath = this.level.getBlockState(machinePos.below());
         Block blockBeneath = blockStateBeneath.getBlock();

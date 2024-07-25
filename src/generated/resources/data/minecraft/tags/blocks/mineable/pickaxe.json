@@ -3,6 +3,8 @@
     "cobalt:cobalt_ore",
     "cobalt:cobalt_block",
     "cobalt:deepslate_cobalt_ore",
-    "cobalt:hempcrete_bricks"
+    "cobalt:hempcrete_bricks",
+    "cobalt:ore_extractor_mkone",
+    "cobalt:concentrated_iron_ore"
   ]
 }

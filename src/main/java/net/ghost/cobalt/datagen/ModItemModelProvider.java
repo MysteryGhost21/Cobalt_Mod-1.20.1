@@ -19,6 +19,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.COBALT_INGOT);
         simpleItem(ModItems.RAW_COBALT);
+        simpleItem(ModItems.IRON_CHUNK);
         simpleItem(ModItems.METAL_DETECTOR);
         simpleItem(ModItems.HEMPCRETE_BRICK);
         simpleItem(ModItems.HEMP);

@@ -29,11 +29,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.DEEPSLATE_COBALT_ORE.get()
                 );
 
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.CONCENTRATED_IRON_ORE.get()
+                );
+
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.COBALT_ORE.get(),
                         ModBlocks.COBALT_BLOCK.get(),
                         ModBlocks.DEEPSLATE_COBALT_ORE.get(),
-                        ModBlocks.HEMPCRETE_BRICKS.get()
+                        ModBlocks.HEMPCRETE_BRICKS.get(),
+                        ModBlocks.ORE_EXTRACTOR_MKONE.get(),
+                        ModBlocks.CONCENTRATED_IRON_ORE.get()
                 );
     }
 }

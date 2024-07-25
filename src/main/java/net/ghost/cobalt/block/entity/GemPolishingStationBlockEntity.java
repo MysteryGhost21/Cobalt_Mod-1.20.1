@@ -3,6 +3,7 @@ package net.ghost.cobalt.block.entity;
 import net.ghost.cobalt.block.ModBlocks;
 import net.ghost.cobalt.block.custom.GemPolishingStationBlock;
 import net.ghost.cobalt.item.ModItems;
+import net.ghost.cobalt.recipe.GemPolishingRecipe;
 import net.ghost.cobalt.screen.GemPolishingStationMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -30,6 +31,8 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class GemPolishingStationBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(2);
@@ -143,28 +146,34 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     }
 
     private void craftItem() {
-        ItemStack result = new ItemStack(ModItems.COBALT_INGOT.get(), 1);
+        Optional<GemPolishingRecipe> recipe = getCurrentRecipe();
+        ItemStack result = recipe.get().getResultItem(null);
+
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
 
-        // Assuming 'this.pos' is the machine's position
-        BlockPos spawnPos = this.getBlockPos(); // Adjust the offset as needed
-
-        // Spawn the item entity at the specified position
-        ItemEntity itemEntity = new ItemEntity(this.level, spawnPos.getX() + 1.5, spawnPos.getY() + 2, spawnPos.getZ() + 0.5, result);
-        itemEntity.setDeltaMovement(0, 0, 0);
-        this.level.addFreshEntity(itemEntity);
+        this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),
+                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount()));
     }
 
     private boolean hasRecipe() {
-        BlockPos machinePos = this.getBlockPos(); // Assuming 'this.pos' is the machine's position
-        BlockState blockStateBeneath = this.level.getBlockState(machinePos.below());
-        Block blockBeneath = blockStateBeneath.getBlock();
+        Optional<GemPolishingRecipe> recipe = getCurrentRecipe();
 
-        // Replace 'ModBlocks.YOUR_BLOCK.get()' with the block you want to match
-        boolean hasMatchingBlock = blockBeneath == ModBlocks.COBALT_ORE.get();
+        if(recipe.isEmpty()) {
+            return false;
+        }
+        ItemStack result = recipe.get().getResultItem(null);
 
-        ItemStack result = new ItemStack(ModItems.COBALT_INGOT.get());
-        return hasMatchingBlock && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
+
+        return recipe.isPresent() && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
+    }
+
+    private Optional<GemPolishingRecipe> getCurrentRecipe() {
+        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
+        for(int i = 0; i < itemHandler.getSlots(); i++) {
+            inventory.setItem(i, this.itemHandler.getStackInSlot(i));
+        }
+
+        return this.level.getRecipeManager().getRecipeFor(GemPolishingRecipe.Type.INSTANCE, inventory, level);
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {
